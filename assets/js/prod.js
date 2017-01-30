@@ -6,10 +6,7 @@ jQuery.noConflict();
 	}
 
 	 $(document).ready(function () {
-	 	console.log("test");
-	 	console.log("test");
-	 	console.log("test453463464t44454terff45");
-	 	console.log("test453463464t44454terff45");
+
 
 	 });
 

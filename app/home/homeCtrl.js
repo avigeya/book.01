@@ -2,7 +2,7 @@ angular.module('startBooks.controllers', [])
 
 .controller('addBooksCtrl', ['$scope', '$http',  function($scope, $http){
 
-	$scope.addBook = function() {
+	/*$scope.addBook = function() {
 
           $http({
               
@@ -49,13 +49,13 @@ angular.module('startBooks.controllers', [])
     	{id: 63, name: "Genre 16"}
     ];
     $scope.myGenres = 2;
-
+*/
 
 }])
 
 .controller('addAuthorCtrl', ['$scope', '$http',  function($scope, $http){
 
-  $scope.addAuthor = function() {
+ /* $scope.addAuthor = function() {
 
           $http({
               
@@ -76,13 +76,13 @@ angular.module('startBooks.controllers', [])
               
           });
           //console.log($scope.newNameBook);
-    };
+    };*/
 
 }])
 
 .controller('addGenreCtrl', ['$scope', '$http',  function($scope, $http){
 
-  $scope.addAuthor = function() {
+  /*$scope.addAuthor = function() {
 
           $http({
               
@@ -103,14 +103,14 @@ angular.module('startBooks.controllers', [])
               
           });
           //console.log($scope.newNameBook);
-    };
+    };*/
 
 }])
 
 
 .controller('printAllBooks', ['$scope', function($scope){
 
-      $scope.books = [
+     /*$scope.books = [
       {id: 1, name: "Book 1", price: 125, author: "Author 15", genre: "Genre 15", description: "Many many words about this."},
       {id: 2, name: "Book 2", price: 125, author: "Author 14", genre: "Genre 1", description: "Many many words about this."},
       {id: 3, name: "Book 3", price: 125, author: "Author 5", genre: "Genre 15", description: "Many many words about this."},
@@ -120,7 +120,7 @@ angular.module('startBooks.controllers', [])
       {id: 7, name: "Book 7", price: 125, author: "Author 10", genre: "Genre 14", description: "Many many words about this."},
       {id: 8, name: "Book 8", price: 125, author: "Author 11", genre: "Genre 16", description: "Many many words about this."}
 
-    ];
+    ];*/
 
 }]);
 

@@ -1,7 +1,12 @@
 angular.module('startBooks', ['ngRoute'])
 .config(function($routeProvider) {
     $routeProvider
-    .when("/", {
-        templateUrl : "index.html"
-    });
+    .when("/home", {
+        templateUrl : "app/home/homeView.html"
+    })
+    .otherwise({
+      redirectTo: '/'
+   });
 });
+
+// попробовать сделат через stateProvider
