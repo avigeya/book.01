@@ -6,16 +6,8 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'assets/js/template.js' 
-                ],
-                dest: 'assets/js/prod.js',
-            }
-        },
-        concat: {
-            dist: {
-                src: [
                     'node_modules/jquery/dist/jquery.js',  
-                    'node_modules/jquery/angular.js'  
+                    'node_modules/angular/angular.js'  
                 ],
                 dest: 'assets/js/libs.js',
             }
@@ -32,16 +24,6 @@ module.exports = function(grunt) {
                 dest: 'assets/js/libs.min.js'
             }
         },
-       /* sass: {
-            dist: {
-                options: {
-                    style: 'compressed'
-                },
-                files: {
-                    'assets/css/main.css': 'assets/scss/main.scss'
-                }
-            }
-        },*/
         watch: {
             scripts: {
                 files: ['assets/js/*.js'],
@@ -49,13 +31,6 @@ module.exports = function(grunt) {
                 options: {
                     spawn: false,
                 },
-            },
-            css: {
-                files: ['assets/scss/*.scss'],
-                tasks: ['sass'],
-                options: {
-                    spawn: false,
-                }
             }
         }
 
