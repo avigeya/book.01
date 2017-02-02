@@ -1,0 +1,14 @@
+<Files adminView.html> 
+AuthType Basic
+AuthName "Password Protected Area"
+AuthGroupFile /projects/book.01/app/admin
+AuthUserFile /projects/book.01/app/admin/.htpasswd
+Require valid-user
+</Files>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)       /index.html
+</IfModule>

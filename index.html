@@ -10,11 +10,28 @@
 	<script type="text/javascript" src="app/app-modules.js"></script>
 	<script type="text/javascript" src="app/home/homeCtrl.js"></script>
 	<script type="text/javascript" src="app/app-routes.js"></script>
-</head>
-<body>
 
-	<div data-ng-app="startBooks">
-		<a href="/home">Home</a>
+	<base href="/">
+</head>
+<body data-ng-app="startBooks">
+	<nav class="navbar navbar-inverse">
+	  <div class="container">
+	  	<ul class="nav navbar-nav">
+	  		<li>
+	  			<a href="/home">Home</a>
+	  		</li>
+	  		<li>
+	  			<a href="/books">All Books</a>
+	  		</li>
+	  		<li>
+	  			<a href="/admin">Admin panel</a>
+	  		</li>
+	  	</ul>
+		
+	  </div>
+	</nav>
+
+	<div class="container">
 		<div ng-view ></div>
 	</div>
 
