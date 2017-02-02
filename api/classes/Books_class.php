@@ -86,7 +86,29 @@ class Books {
     }
 
     public function get_all_books(){
-        
+        $connect = $this->connect_to_db();
+
+        $sql = "SELECT * from `books`";
+        $sql2= "SELECT * from `authors`";
+        $return2 = mysqli_query($connect, $sql2);
+        $return = mysqli_query($connect, $sql);
+        //$return = $return->fetch_object();
+         while ($tmp = $return->fetch_array(MYSQLI_ASSOC)) {
+            $obj[] = $tmp;
+        }
+        while ($tmp2 = $return2->fetch_array(MYSQLI_ASSOC)) {
+            $obj2[] = $tmp2;
+        }
+        $i = 0;
+        foreach ($obj2 as $el) {
+          $j = $obj[$i]['id_authors'];
+          $obj[$i]['id_authors'] = $el[$i]['author'];
+          var_dump($obj[$i]['id_authors']);
+          $i++;
+        }
+        $return->close();
+        $return2->close();
+        return $obj;
     }
 
     public function get_all_genre(){
@@ -105,11 +127,6 @@ class Books {
       $return = mysqli_query($connect, $sql);
 
     }
-
-    public function add_new_author(){
-
-    }
-
 
 }
 

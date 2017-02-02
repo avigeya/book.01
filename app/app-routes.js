@@ -1,4 +1,4 @@
-angular.module('startBooks', ['ngRoute'])
+angular.module('startBooks', ['ngRoute', 'startBooks.controllers'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/home", {
@@ -6,6 +6,10 @@ angular.module('startBooks', ['ngRoute'])
     })
     .when("/admin", {
         templateUrl : "app/admin/adminView.html"
+    })
+    .when("/books", {
+        templateUrl : "app/books/booksView.html",
+        controller:   "printAllBooks"
     })
     .otherwise({
       redirectTo: '/'
